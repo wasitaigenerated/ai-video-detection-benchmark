@@ -82,6 +82,18 @@ larger clips are skipped and reported as unscored):
 WAI_API_KEY=wai_... python eval.py --adapter wai
 ```
 
+## Hidden split integrity
+
+The hidden 40% stays private so nobody can tune a detector on it. To show it does not change after the
+fact, [`2026-10/hidden-split-sha256.txt`](2026-10/hidden-split-sha256.txt) lists the SHA-256 of every hidden
+file (246 clips, originals and copies), sorted. The SHA-256 of that list is
+
+```
+d00f3794c4a4a10d48940b42d3c39e2cf4425609e50ea37a0871570de7e03de4
+```
+
+If we ever add, remove or swap a hidden file, this hash changes.
+
 ## Submit your detector
 
 Run your detector on the public split and email **patrick@wasitaigenerated.com** with your results and a way
@@ -99,4 +111,4 @@ page, including results that beat ours.
 
 AI-generated files: CC BY 4.0 (WasItAIGenerated). Real files keep their original license, listed per
 file in `metadata.csv` with author and source; CC BY and CC BY-SA files require attribution to the listed
-author when reused. Code: CC BY 4.0 (see `LICENSE`).
+author when reused. Code (`eval.py`): MIT (see `LICENSE`). Results and text in this repository: CC BY 4.0 (see `LICENSE-DATA`).
