@@ -1,0 +1,4 @@
+__pycache__/
+.DS_Store
+2026-10/data/
+2026-10/scores_*.csv
